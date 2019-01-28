@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
   font: helvetica;
+  align-self: center;
+  text-align: center;
+  float: center;
+  image-orientation: center;
 }
 
 #container {
@@ -10,51 +14,48 @@
   grid-template-rows: .1fr .25fr .5fr .25fr .5fr .25fr .1fr;
   grid-template-areas:
   "nav"
-  "top-box"
-  "top-dog"
+  "main-header"
+  "box-0"
+  "top-button"
   "box-1"
   "box-2"
   "box-3"
   "footer";
 }
 
+#main-header {
+  grid-area: main-header;
+  font-weight: lighter;
+  font: Arial;
+}
+
 h3 {
   font-size: 15px;
-  text-align: center;
 }
 
 nav{
   grid-area: nav;
-  color:white;
+  color: white;
   background-color: #BBEDF6;
 }
+
 nav ul{
+  float: right;
   padding:1%;
   list-style: none;
-  float: right;
-}
-nav li{
-  display: inline;
 }
 
-#top-box {
-  grid-area: top-box;
-  align-content: center;
-  background-image:
-   url(images/park.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+nav li{
+  display: inline;
 }
 
 img {
   width: 100%;
   background-size: cover;
+  image-orientation: center;
   background-position: center;
 }
-#top-dog {
-  grid-area: top-dog;
-}
+
 .img-box {
   width: 150px;
   background-size: cover;
@@ -62,24 +63,45 @@ img {
   border-radius: 50%;
   border-style: solid;
   border-color: #5EB1BF;
-  position: center;
 }
+
 p {
   padding: 5%;
   font-size: 12px;
 }
 
-.button {
-  color: black;
+.top-button {
+  grid-area: top-button;
+  color: #5EB1BF;
   padding: 5%;
-  text-align: center;
   border-style: solid;
+  border-color: #5EB1BF;
+  width: 100px;
+  font-size: 10px;
+}
+
+.button {
+  color: #5EB1BF;
+  padding: 5%;
+  border-style: solid;
+  border-color: #5EB1BF;
+  width: 100px;
+  font-size: 10px;
+}
+
+#box-0 {
+  grid-area: box-0;
+  background-image:
+  url(images/park.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 5%;
 }
 
 #box-1 {
   grid-area: box-1;
   padding: 5%;
-  image-orientation: center;
 }
 
 #box-2 {
@@ -95,7 +117,6 @@ p {
 #footer-box {
   grid-area: footer;
   background-color: #5EB1BF;
-  text-align: center;
   color: #fff;
 }
 
@@ -123,9 +144,9 @@ footer ul{
   grid-template-rows: .1fr .25fr .5fr .25fr .5fr .25fr .1fr;
   grid-template-areas:
   ". nav nav nav ."
-  ". top-box top-box top-box ."
-  ". top-box top-box top-box ."
-  ". top-box top-box top-box ."
+  ". main-header main-header main-header ."
+  ". . box-0 . ."
+  ". . top-button . ."
   ". box-1 box-2 box-3 ."
   ". footer footer footer ."
   ;
