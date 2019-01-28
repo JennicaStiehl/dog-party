@@ -94,12 +94,28 @@ p {
   color: #fff;
 }
 
+footer ul{
+  padding:1%;
+  list-style: none;
+  float: center;
+}
+.footer-li{
+  display: inline;
+}
+.footer-img {
+  width: 25px;
+  display: inline;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
 @media screen and (min-width: 736px)
 {
   #container {
   display: grid;
-  grid-template-columns: .05fr 1.3fr 1.3fr 1.3fr .05fr;
-  grid-template-rows: .1fr .25fr .25fr .25fr .5fr .5fr .1fr;
+  grid-template-columns: .1fr 1.3fr 1.3fr 1.3fr .1fr;
+  grid-template-rows: .1fr .25fr .25fr .25fr .5fr .25fr .1fr;
   grid-template-areas:
   ". nav nav nav ."
   ". top-box top-box top-box ."
