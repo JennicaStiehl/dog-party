@@ -27,11 +27,23 @@
   grid-area: main-header;
   font-weight: lighter;
   font: Arial;
+
 }
 
 h3 {
   font-size: 15px;
+
 }
+
+/* h4 {
+  grid-area: top-button;
+  color: #5EB1BF;
+  padding: 5%;
+  border-style: solid;
+  border-color: #5EB1BF;
+  width: 100px;
+  font-size: 10px;
+} */
 
 nav{
   grid-area: nav;
@@ -72,6 +84,7 @@ p {
 
 .top-button {
   grid-area: top-button;
+  float: center;
   color: #5EB1BF;
   padding: 5%;
   border-style: solid;
